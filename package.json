@@ -5,16 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start:build": "tsc -w",
-    "start:run": "node --watch ./dist/index.js",
-    "start": "concurrently npm:start:*"
+    "build": "tsc",
+    "dev": "node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.11.10",
-    "concurrently": "^7.6.0",
     "typescript": "^4.9.3"
   }
 }
