@@ -1,6 +1,21 @@
-import { add, sub, div, mul } from './utils.js';
+#!/usr/bin/env node
 
-console.log(add(3, 7));
-console.log(sub(4, 1));
-console.log(mul(2, 5));
-console.log(div(10, 2));
+import inquirer from 'inquirer';
+import chalk from 'chalk';
+import { questions } from './questions.js';
+
+async function askForInfo(): Promise<void> {
+  try {
+    const user: { name: string; age: number } = await inquirer.prompt(
+      questions
+    );
+
+    console.log(
+      chalk.bgCyan(`Hello, ${user.name} you are (${user.age} years old)!`)
+    );
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+await askForInfo();

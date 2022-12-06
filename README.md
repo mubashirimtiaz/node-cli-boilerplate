@@ -1,1 +1,1 @@
-# Boilerplate for Node.js with TypeScript
+# Boilerplate for Node.js CLI APP
